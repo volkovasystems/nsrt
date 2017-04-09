@@ -1,0 +1,37 @@
+{
+  "name": "nsrt",
+  "version": "0.0.0",
+  "description": "Insert unique value to array.",
+  "main": "nsrt.deploy.js",
+  "support": "nsrt.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "insert",
+    "unique",
+    "value",
+    "array",
+    "nsrt"
+  ],
+  "homepage": "https://github.com/volkovasystems/nsrt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "een": "^0.15.0"
+  },
+  "dependencies": {
+    "deequal": "^0.3.0",
+    "doubt": "^0.24.0",
+    "een": "^0.15.0",
+    "protype": "^0.21.0",
+    "raze": "^0.25.0",
+    "truly": "^0.17.0"
+  }
+}
