@@ -4,7 +4,6 @@ deequal \
 doubt \
 een \
 protype \
-raze \
 truly \
 --save && \
 yarn add \
@@ -20,7 +19,6 @@ deequal \
 doubt \
 een \
 protype \
-raze \
 truly \
 --save \
 --force-latest

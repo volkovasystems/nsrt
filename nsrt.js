@@ -51,7 +51,6 @@
 			"doubt": "doubt",
 			"een": "een",
 			"protype": "protype",
-			"raze": "raze",
 			"truly": truly
 		}
 	@end-include
@@ -68,14 +67,14 @@ const nsrt = function nsrt( array, value, comparator ){
 	/*;
 		@meta-configuration:
 			{
-				"array:required": doubt:AS_ARRAY,
+				"array:required": Array,
 				"value:required": "*",
 				"comparator": "function"
 			}
 		@end-meta-configuration
 	*/
 
-	if( !doubt( array, AS_ARRAY ) ){
+	if( !doubt( array, ARRAY ) ){
 		throw new Error( "invalid array" );
 	}
 
@@ -84,8 +83,6 @@ const nsrt = function nsrt( array, value, comparator ){
 	}
 
 	comparator = comparator || ( ( element, value ) => deequal( element, value ) );
-
-	array = raze( array );
 
 	!een( array, value, comparator ) && array.push( value );
 
