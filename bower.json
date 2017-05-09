@@ -1,6 +1,6 @@
 {
   "name": "nsrt",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Insert unique value to array.",
   "main": "nsrt.deploy.js",
   "support": "nsrt.support.js",
@@ -25,7 +25,7 @@
     "tests"
   ],
   "dependencies": {
-    "deequal": "^0.7.0",
+    "deequal": "^0.8.0",
     "doubt": "^0.26.0",
     "een": "^0.18.0",
     "protype": "^0.21.0",
