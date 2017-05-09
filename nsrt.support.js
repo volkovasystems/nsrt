@@ -34,6 +34,9 @@
               			"file": "nsrt.js",
               			"module": "nsrt",
               			"author": "Richeve S. Bebedor",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+              			],
               			"eMail": "richeve.bebedor@gmail.com",
               			"repository": "https://github.com/volkovasystems/nsrt.git",
               			"test": "nsrt-test.js",
