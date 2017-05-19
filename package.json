@@ -1,6 +1,6 @@
 {
   "name": "nsrt",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Insert unique value to array.",
   "main": "nsrt.js",
   "support": "nsrt.support.js",
@@ -32,7 +32,7 @@
   "homepage": "https://github.com/volkovasystems/nsrt#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "deequal": "^0.8.0",
+    "deequal": "^0.9.0",
     "doubt": "^0.26.0",
     "een": "^0.18.0",
     "protype": "^0.21.0",
