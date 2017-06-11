@@ -1,8 +1,8 @@
 yarn add \
 babel-runtime \
-deequal \
 doubt \
 een \
+lqual \
 protype \
 truly \
 --save && \
@@ -15,9 +15,9 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-deequal \
 doubt \
 een \
+lqual \
 protype \
 truly \
 --save \

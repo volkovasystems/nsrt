@@ -46,24 +46,25 @@
 
 	@module-documentation:
 		Insert unique value to array.
+
+		This module is array-preserving.
 	@end-module-documentation
 
 	@include:
 		{
-			"deequal": "deequal",
 			"doubt": "doubt",
 			"een": "een",
+			"lqual": "lqual",
 			"protype": "protype",
 			"truly": truly
 		}
 	@end-include
 */
 
-const deequal = require( "deequal" );
 const doubt = require( "doubt" );
 const een = require( "een" );
+const lqual = require( "lqual" );
 const protype = require( "protype" );
-const raze = require( "raze" );
 const truly = require( "truly" );
 
 const nsrt = function nsrt( array, value, comparator ){
@@ -85,7 +86,7 @@ const nsrt = function nsrt( array, value, comparator ){
 		throw new Error( "invalid comparator" );
 	}
 
-	comparator = comparator || ( ( element, value ) => deequal( element, value ) );
+	comparator = comparator || ( ( element, value ) => lqual( element, value ) );
 
 	!een( array, value, comparator ) && array.push( value );
 
