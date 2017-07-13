@@ -3,7 +3,6 @@ babel-runtime \
 doubt \
 een \
 lqual \
-protype \
 truly \
 --save && \
 yarn add \
@@ -18,7 +17,6 @@ bower install \
 doubt \
 een \
 lqual \
-protype \
 truly \
 --save \
 --force-latest

@@ -37,7 +37,7 @@
 			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon"
+				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
 			"repository": "https://github.com/volkovasystems/nsrt.git",
 			"test": "nsrt-test.js",
@@ -56,7 +56,6 @@
 			"doubt": "doubt",
 			"een": "een",
 			"lqual": "lqual",
-			"protype": "protype",
 			"truly": truly
 		}
 	@end-include
@@ -65,7 +64,6 @@
 const doubt = require( "doubt" );
 const een = require( "een" );
 const lqual = require( "lqual" );
-const protype = require( "protype" );
 const truly = require( "truly" );
 
 const nsrt = function nsrt( array, value, comparator ){
@@ -83,7 +81,7 @@ const nsrt = function nsrt( array, value, comparator ){
 		throw new Error( "invalid array" );
 	}
 
-	if( truly( comparator ) && !protype( comparator, FUNCTION ) ){
+	if( truly( comparator ) && typeof comparator != "function" ){
 		throw new Error( "invalid comparator" );
 	}
 

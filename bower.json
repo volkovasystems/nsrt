@@ -1,13 +1,13 @@
 {
   "name": "nsrt",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Insert unique value to array.",
   "main": "nsrt.deploy.js",
   "support": "nsrt.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon"
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -26,10 +26,9 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.27.0",
-    "een": "^0.19.0",
-    "lqual": "^0.2.0",
-    "protype": "^0.22.0",
+    "doubt": "^0.30.0",
+    "een": "^0.21.0",
+    "lqual": "^0.3.0",
     "truly": "^0.19.0"
   }
 }
