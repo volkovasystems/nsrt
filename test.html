@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>nsrt unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:nsrt</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./nsrt.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "nsrt unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ),
-					[ 1, 2, 3, 4, 5 ], "should be equal to [ 1, 2, 3, 4, 5 ]" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
