@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const nsrt = require( "./nsrt.js" );
@@ -67,27 +67,50 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "nsrt", ( ) => {
 
-} );
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
+			assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ), [ 1, 2, 3, 4, 5 ] );
+		} );
+	} );
 
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "nsrt", ( ) => {
 
-} );
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
+			assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ), [ 1, 2, 3, 4, 5 ] );
+		} );
+	} );
 
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "nsrt", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( nsrt( [ 1, 2, 3, 4 ], 5 ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, 5 ] );
+		} );
+	} );
+
+} );
 //: @end-bridge
