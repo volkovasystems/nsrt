@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const nsrt = require( "./nsrt.js" );
@@ -63,11 +63,15 @@ const nsrt = require( "./nsrt.js" );
 
 
 //: @server:
-
 describe( "nsrt", ( ) => {
 
-} );
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
+			assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ), [ 1, 2, 3, 4, 5 ] );
+		} );
+	} );
 
+} );
 //: @end-server
 
 

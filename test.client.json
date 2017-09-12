@@ -1,0 +1,84 @@
+{
+	"state": {
+		"passed": 1,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-12T09:20:23.774Z",
+	"end": "2017-09-12T09:21:09.103Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "nsrt",
+			"duration": 0,
+			"start": "2017-09-12T09:21:08.803Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "nsrt",
+			"duration": 117,
+			"start": "2017-09-12T09:21:08.803Z",
+			"end": "2017-09-12T09:21:08.920Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-12T09:21:08.804Z",
+					"end": "2017-09-12T09:21:08.805Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5 ]"
+				},
+				{
+					"start": "2017-09-12T09:21:08.919Z",
+					"end": "2017-09-12T09:21:08.919Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5 ]"
+				},
+				{
+					"start": "2017-09-12T09:21:08.920Z",
+					"end": "2017-09-12T09:21:08.920Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "nsrt"
+				}
+			]
+		},
+		{
+			"name": "`nsrt( [ 1, 2, 3, 4 ], 5 )`",
+			"duration": 116,
+			"start": "2017-09-12T09:21:08.804Z",
+			"end": "2017-09-12T09:21:08.920Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, 5 ]",
+					"start": "2017-09-12T09:21:08.804Z",
+					"end": "2017-09-12T09:21:08.919Z",
+					"duration": 115,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

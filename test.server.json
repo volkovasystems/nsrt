@@ -1,16 +1,32 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-11T19:36:54.830Z",
-    "end": "2017-09-11T19:36:54.830Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 2,
+		"tests": 1,
+		"passes": 1,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-12T09:20:22.504Z",
+		"end": "2017-09-12T09:20:22.512Z",
+		"duration": 8
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, 5 ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], 5 )` should be equal to [ 1, 2, 3, 4, 5 ]",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, 5 ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], 5 )` should be equal to [ 1, 2, 3, 4, 5 ]",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
