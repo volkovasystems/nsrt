@@ -45,7 +45,7 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"nsrt": "nsrt"
 		}
 	@end-include
@@ -65,9 +65,57 @@ const nsrt = require( "./nsrt.js" );
 //: @server:
 describe( "nsrt", ( ) => {
 
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 'hello' )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 'hello' ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], "hello" );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, "hello" ] );
+
+		} );
+	} );
+
 	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
-			assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ), [ 1, 2, 3, 4, 5 ] );
+			let result = nsrt( [ 1, 2, 3, 4 ], 5 );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, 5 ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], true )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, true ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], true );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, true ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )`", ( ) => {
+		it( "should be equal to ", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, [ 5, 6 ] ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], Symbol.for( "hello" ) );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, Symbol.for( "hello" ) ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], function hello( ){ } );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, function hello( ){ } ] );
+
 		} );
 	} );
 

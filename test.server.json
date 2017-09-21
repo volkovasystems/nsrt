@@ -1,19 +1,54 @@
 {
 	"stats": {
-		"suites": 2,
-		"tests": 1,
-		"passes": 1,
+		"suites": 7,
+		"tests": 6,
+		"passes": 6,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-09-12T09:20:22.504Z",
-		"end": "2017-09-12T09:20:22.512Z",
-		"duration": 8
+		"start": "2017-09-21T08:39:39.985Z",
+		"end": "2017-09-21T08:39:39.995Z",
+		"duration": 10
 	},
 	"tests": [
 		{
+			"title": "should be equal to [ 1, 2, 3, 4, 'hello' ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], 'hello' )` should be equal to [ 1, 2, 3, 4, 'hello' ]",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
 			"title": "should be equal to [ 1, 2, 3, 4, 5 ]",
 			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], 5 )` should be equal to [ 1, 2, 3, 4, 5 ]",
-			"duration": 4,
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, true ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], true )` should be equal to [ 1, 2, 3, 4, true ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to ",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )` should be equal to ",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )` should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )` should be equal to [ 1, 2, 3, 4, function hello( ){ } ]",
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		}
@@ -22,9 +57,44 @@
 	"failures": [],
 	"passes": [
 		{
+			"title": "should be equal to [ 1, 2, 3, 4, 'hello' ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], 'hello' )` should be equal to [ 1, 2, 3, 4, 'hello' ]",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
 			"title": "should be equal to [ 1, 2, 3, 4, 5 ]",
 			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], 5 )` should be equal to [ 1, 2, 3, 4, 5 ]",
-			"duration": 4,
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, true ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], true )` should be equal to [ 1, 2, 3, 4, true ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to ",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )` should be equal to ",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )` should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )` should be equal to [ 1, 2, 3, 4, function hello( ){ } ]",
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		}

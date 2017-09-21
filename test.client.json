@@ -1,11 +1,11 @@
 {
 	"state": {
-		"passed": 1,
+		"passed": 6,
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-09-12T09:20:23.774Z",
-	"end": "2017-09-12T09:21:09.103Z",
+	"start": "2017-09-21T08:39:41.197Z",
+	"end": "2017-09-21T08:42:19.413Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,36 +28,116 @@
 		{
 			"name": "nsrt",
 			"duration": 0,
-			"start": "2017-09-12T09:21:08.803Z",
+			"start": "2017-09-21T08:42:18.902Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "nsrt",
-			"duration": 117,
-			"start": "2017-09-12T09:21:08.803Z",
-			"end": "2017-09-12T09:21:08.920Z",
+			"duration": 334,
+			"start": "2017-09-21T08:42:18.902Z",
+			"end": "2017-09-21T08:42:19.236Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-09-12T09:21:08.804Z",
-					"end": "2017-09-12T09:21:08.805Z",
+					"start": "2017-09-21T08:42:18.904Z",
+					"end": "2017-09-21T08:42:18.904Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 'hello' ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.001Z",
+					"end": "2017-09-21T08:42:19.001Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 'hello' ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.002Z",
+					"end": "2017-09-21T08:42:19.003Z",
 					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "nsrt",
 					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5 ]"
 				},
 				{
-					"start": "2017-09-12T09:21:08.919Z",
-					"end": "2017-09-12T09:21:08.919Z",
+					"start": "2017-09-21T08:42:19.045Z",
+					"end": "2017-09-21T08:42:19.045Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "nsrt",
 					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5 ]"
 				},
 				{
-					"start": "2017-09-12T09:21:08.920Z",
-					"end": "2017-09-12T09:21:08.920Z",
+					"start": "2017-09-21T08:42:19.045Z",
+					"end": "2017-09-21T08:42:19.045Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, true ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.088Z",
+					"end": "2017-09-21T08:42:19.088Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, true ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.089Z",
+					"end": "2017-09-21T08:42:19.089Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to "
+				},
+				{
+					"start": "2017-09-21T08:42:19.142Z",
+					"end": "2017-09-21T08:42:19.142Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to "
+				},
+				{
+					"start": "2017-09-21T08:42:19.143Z",
+					"end": "2017-09-21T08:42:19.143Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.183Z",
+					"end": "2017-09-21T08:42:19.183Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.183Z",
+					"end": "2017-09-21T08:42:19.183Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.235Z",
+					"end": "2017-09-21T08:42:19.235Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "nsrt",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]"
+				},
+				{
+					"start": "2017-09-21T08:42:19.236Z",
+					"end": "2017-09-21T08:42:19.236Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "nsrt"
@@ -65,16 +145,96 @@
 			]
 		},
 		{
+			"name": "`nsrt( [ 1, 2, 3, 4 ], 'hello' )`",
+			"duration": 99,
+			"start": "2017-09-21T08:42:18.903Z",
+			"end": "2017-09-21T08:42:19.002Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, 'hello' ]",
+					"start": "2017-09-21T08:42:18.903Z",
+					"end": "2017-09-21T08:42:19.001Z",
+					"duration": 98,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
 			"name": "`nsrt( [ 1, 2, 3, 4 ], 5 )`",
-			"duration": 116,
-			"start": "2017-09-12T09:21:08.804Z",
-			"end": "2017-09-12T09:21:08.920Z",
+			"duration": 43,
+			"start": "2017-09-21T08:42:19.002Z",
+			"end": "2017-09-21T08:42:19.045Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 1, 2, 3, 4, 5 ]",
-					"start": "2017-09-12T09:21:08.804Z",
-					"end": "2017-09-12T09:21:08.919Z",
-					"duration": 115,
+					"start": "2017-09-21T08:42:19.002Z",
+					"end": "2017-09-21T08:42:19.045Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`nsrt( [ 1, 2, 3, 4 ], true )`",
+			"duration": 43,
+			"start": "2017-09-21T08:42:19.045Z",
+			"end": "2017-09-21T08:42:19.088Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, true ]",
+					"start": "2017-09-21T08:42:19.045Z",
+					"end": "2017-09-21T08:42:19.088Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )`",
+			"duration": 54,
+			"start": "2017-09-21T08:42:19.088Z",
+			"end": "2017-09-21T08:42:19.142Z",
+			"tests": [
+				{
+					"name": "should be equal to ",
+					"start": "2017-09-21T08:42:19.089Z",
+					"end": "2017-09-21T08:42:19.142Z",
+					"duration": 53,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )`",
+			"duration": 41,
+			"start": "2017-09-21T08:42:19.142Z",
+			"end": "2017-09-21T08:42:19.183Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]",
+					"start": "2017-09-21T08:42:19.142Z",
+					"end": "2017-09-21T08:42:19.183Z",
+					"duration": 41,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )`",
+			"duration": 52,
+			"start": "2017-09-21T08:42:19.183Z",
+			"end": "2017-09-21T08:42:19.235Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]",
+					"start": "2017-09-21T08:42:19.183Z",
+					"end": "2017-09-21T08:42:19.235Z",
+					"duration": 52,
 					"state": "pass"
 				}
 			],
