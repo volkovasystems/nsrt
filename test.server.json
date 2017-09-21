@@ -5,8 +5,8 @@
 		"passes": 6,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-09-21T08:39:39.985Z",
-		"end": "2017-09-21T08:39:39.995Z",
+		"start": "2017-09-21T08:51:16.549Z",
+		"end": "2017-09-21T08:51:16.559Z",
 		"duration": 10
 	},
 	"tests": [
@@ -32,8 +32,8 @@
 			"err": {}
 		},
 		{
-			"title": "should be equal to ",
-			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )` should be equal to ",
+			"title": "should be equal to [ 1, 2, 3, 4, [ 5, 6 ] ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )` should be equal to [ 1, 2, 3, 4, [ 5, 6 ] ]",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
@@ -78,8 +78,8 @@
 			"err": {}
 		},
 		{
-			"title": "should be equal to ",
-			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )` should be equal to ",
+			"title": "should be equal to [ 1, 2, 3, 4, [ 5, 6 ] ]",
+			"fullTitle": "nsrt `nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )` should be equal to [ 1, 2, 3, 4, [ 5, 6 ] ]",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}

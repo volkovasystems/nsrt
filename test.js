@@ -93,7 +93,7 @@ describe( "nsrt", ( ) => {
 	} );
 
 	describe( "`nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )`", ( ) => {
-		it( "should be equal to ", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, [ 5, 6 ] ]", ( ) => {
 			let result = nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] );
 
 			assert.deepEqual( result, [ 1, 2, 3, 4, [ 5, 6 ] ] );
