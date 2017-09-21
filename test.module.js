@@ -45,7 +45,7 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"nsrt": "nsrt"
 		}
 	@end-include
@@ -69,9 +69,57 @@ const path = require( "path" );
 //: @server:
 describe( "nsrt", ( ) => {
 
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 'hello' )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 'hello' ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], "hello" );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, "hello" ] );
+
+		} );
+	} );
+
 	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
-			assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ), [ 1, 2, 3, 4, 5 ] );
+			let result = nsrt( [ 1, 2, 3, 4 ], 5 );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, 5 ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], true )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, true ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], true );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, true ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )`", ( ) => {
+		it( "should be equal to ", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, [ 5, 6 ] ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], Symbol.for( "hello" ) );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, Symbol.for( "hello" ) ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], function hello( ){ } );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, function hello( ){ } ] );
+
 		} );
 	} );
 
@@ -82,9 +130,57 @@ describe( "nsrt", ( ) => {
 //: @client:
 describe( "nsrt", ( ) => {
 
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 'hello' )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 'hello' ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], "hello" );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, "hello" ] );
+
+		} );
+	} );
+
 	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
-			assert.deepEqual( nsrt( [ 1, 2, 3, 4 ], 5 ), [ 1, 2, 3, 4, 5 ] );
+			let result = nsrt( [ 1, 2, 3, 4 ], 5 );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, 5 ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], true )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, true ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], true );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, true ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )`", ( ) => {
+		it( "should be equal to ", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, [ 5, 6 ] ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], Symbol.for( "hello" ) );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, Symbol.for( "hello" ) ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]", ( ) => {
+			let result = nsrt( [ 1, 2, 3, 4 ], function hello( ){ } );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4, function hello( ){ } ] );
+
 		} );
 	} );
 
@@ -97,6 +193,25 @@ describe( "nsrt", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`nsrt( [ 1, 2, 3, 4 ], 'hello' )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 'hello' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let result = nsrt( [ 1, 2, 3, 4 ], "hello" );
+
+					return JSON.stringify( result );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, "hello" ] );
+
+		} );
+	} );
+
 	describe( "`nsrt( [ 1, 2, 3, 4 ], 5 )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4, 5 ]", ( ) => {
 			//: @ignore:
@@ -108,7 +223,85 @@ describe( "nsrt", ( ) => {
 
 			).value;
 			//: @end-ignore
+
 			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, 5 ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], true )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, true ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let result = nsrt( [ 1, 2, 3, 4 ], true );
+
+					return JSON.stringify( result );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, true ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] )`", ( ) => {
+		it( "should be equal to ", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let result = nsrt( [ 1, 2, 3, 4 ], [ 5, 6 ] );
+
+					return JSON.stringify( result );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, [ 5, 6 ] ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], Symbol.for( 'hello' ) )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, Symbol.for( 'hello' ) ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let result = nsrt( [ 1, 2, 3, 4 ], Symbol.for( "hello" ) );
+
+					return JSON.stringify( result );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, Symbol.for( "hello" ) ] );
+
+		} );
+	} );
+
+	describe( "`nsrt( [ 1, 2, 3, 4 ], function hello( ){ } )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, function hello( ){ } ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let result = nsrt( [ 1, 2, 3, 4 ], function hello( ){ } );
+
+					return JSON.stringify( result );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, function hello( ){ } ] );
+
 		} );
 	} );
 
