@@ -275,13 +275,13 @@ describe( "nsrt", ( ) => {
 				function( ){
 					let result = nsrt( [ 1, 2, 3, 4 ], Symbol.for( "hello" ) );
 
-					return JSON.stringify( result );
+					return result[ 4 ].toString( );
 				}
 
 			).value;
 			//: @end-ignore
 
-			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, Symbol.for( "hello" ) ] );
+			assert.equal( result, "Symbol(hello)" );
 
 		} );
 	} );
@@ -294,13 +294,13 @@ describe( "nsrt", ( ) => {
 				function( ){
 					let result = nsrt( [ 1, 2, 3, 4 ], function hello( ){ } );
 
-					return JSON.stringify( result );
+					return result[ 4 ].toString( );
 				}
 
 			).value;
 			//: @end-ignore
 
-			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, function hello( ){ } ] );
+			assert.equal( result, "function hello( ){ }" );
 
 		} );
 	} );
